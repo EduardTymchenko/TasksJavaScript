@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html class="btn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .areas {
+            display: flex;
+            align-items: center;
+            height: 100vh;
+            justify-content: space-around;
+        }
+
+        .area {
+            width: 300px;
+            height: 300px;
+            border: 5px solid red;
+            position: relative;
+
+        }
+
+        .circle {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            position: absolute;
+            transform: translate(-50%, -50%);
+        }
+
+        .poleWidth {
+            display: none;
+        }
+
+        #id-rectangle:checked~.poleWidth {
+            display: block;
+        }
+
+        #id-oval:checked~.poleWidth {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="areas">
+        <div class="areas__item">
+            <input class="areas__item-color" type="color">
+            <div class="selFigure">
+                <input type="radio" name="group1" value="circle" checked> circle
+                <input type="radio" name="group1" value="square"> square
+                <input type="radio" name="group1" value="rectangle" id="id-rectangle"> rectangle
+                <input type="radio" name="group1" value="oval" id="id-oval"> oval
+                <br>
+                <input type="number" name="height" step="5">height
+                <div class="poleWidth">
+                    <input type="number" name="width" step="5">width
+                </div>
+
+
+            </div>
+            <div class="area"></div>
+        </div>
+        <div class="areas__item">
+            <input class="areas__item-color" type="color">
+            <div class="selFigure">
+                <input type="radio" name="group2" value="circle" checked> circle
+                <input type="radio" name="group2" value="square"> square
+                <input type="radio" name="group2" value="rectangle" id="id-rectangle"> rectangle
+                <input type="radio" name="group2" value="oval" id="id-oval"> oval
+                <br>
+                <input type="number" name="height" step="5">height
+                <div class="poleWidth">
+                    <input type="number" name="width" step="5">width
+                </div>
+            </div>
+            <div class="area"></div>
+        </div>
+    </div>
+
+    <script src="task03.js"></script>
+</body>
+
+</html>

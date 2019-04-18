@@ -39,25 +39,28 @@ var characters = [
 function pluck(obj, field) {
    var mass = [];
    var i = 0;
-   obj.forEach(element => {
-      for (var key in element) {
-         if (key === field) {
-            mass[i++] = element[key];
-         }
-      }
-   });
+   for (var i = 0; i < obj.length; i++) {
+      mass.push(obj[i][field])
+   }
    return mass;
 }
 console.log(pluck(characters, 'name')); // [‘barney’, ‘fred’]
 
 //0
-function map(fn, array){
+
+var arr = [11, 12, 13, 2, 55];
+var f1 = function (x) {
+   return x * 2;
+}
+
+function map(fn, array) {
    var array2 = [];
-   for(var i=0; i<array.length; i++){
-    array2[i] = fn(array[i])();
+   for (var i = 0; i < array.length; i++) {
+      array2.push(fn(array[i]));
    }
    return array2;
-  }
-var arr = [11,12,13,2,55];
-var map1 = map(sequence,arr);
-console.log(map1);
+}
+
+console.log(map(f1, arr));
+
+
