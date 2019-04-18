@@ -34,15 +34,11 @@
             transform: translate(-50%, -50%);
         }
 
-        .poleWidth {
+        .fieldWidth {
             display: none;
         }
 
-        #id-rectangle:checked~.poleWidth {
-            display: block;
-        }
-
-        #id-oval:checked~.poleWidth {
+        .forInputWidth:checked ~.fieldWidth {
             display: block;
         }
     </style>
@@ -56,11 +52,11 @@
             <div class="selFigure">
                 <input type="radio" name="group1" value="circle" checked> circle
                 <input type="radio" name="group1" value="square"> square
-                <input type="radio" name="group1" value="rectangle" id="id-rectangle"> rectangle
-                <input type="radio" name="group1" value="oval" id="id-oval"> oval
+                <input type="radio" name="group1" value="rectangle" class="forInputWidth"> rectangle
+                <input type="radio" name="group1" value="oval" class="forInputWidth"> oval
                 <br>
                 <input type="number" name="height" step="5">height
-                <div class="poleWidth">
+                <div class="fieldWidth">
                     <input type="number" name="width" step="5">width
                 </div>
 
@@ -73,11 +69,11 @@
             <div class="selFigure">
                 <input type="radio" name="group2" value="circle" checked> circle
                 <input type="radio" name="group2" value="square"> square
-                <input type="radio" name="group2" value="rectangle" id="id-rectangle"> rectangle
-                <input type="radio" name="group2" value="oval" id="id-oval"> oval
+                <input type="radio" name="group2" value="rectangle" class="forInputWidth"> rectangle
+                <input type="radio" name="group2" value="oval" class="forInputWidth"> oval
                 <br>
                 <input type="number" name="height" step="5">height
-                <div class="poleWidth">
+                <div class="fieldWidth">
                     <input type="number" name="width" step="5">width
                 </div>
             </div>
