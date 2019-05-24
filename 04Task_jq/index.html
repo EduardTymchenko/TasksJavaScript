@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HomeTask04</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .tabs_list {
+            list-style: none;
+            margin: 0;
+            padding-left: 0;
+            font-size: 0;
+            position: relative;
+            top: 2px;
+        }
+
+        .tab_item {
+            display: inline-block;
+            border: 2px solid blue;
+            ;
+            word-spacing: normal;
+            font-size: 14px;
+            padding: 5px;
+            margin-right: -2px;
+
+        }
+
+        .tab_item-active {
+            background-color: lightseagreen;
+            border-left: 2px solid blue;
+            border-right: 2px solid blue;
+            border-top: 2px solid blue;
+            border-bottom: 2px solid lightseagreen;
+
+        }
+
+        .tab_content {
+            border: 2px solid blue;
+            background-color: lightseagreen;
+            max-width: 300px;
+            height: 100px;
+        }
+
+        /* Аккардион */
+        .accordion {
+            margin-top: 20px;
+        }
+
+        .panel-heading {
+            border: 1px solid;
+            margin: 2px;
+            background-color:  aqua;
+            padding: 10px 40px 10px 15px;
+            
+            /* transform: rotate(180deg); */
+
+        }
+        .panel-heading span{
+            float: right; 
+        }
+        
+        .panel-heading.active {
+            background-color: #09afdf;
+            /* transition: 0.3s; */
+        }
+        .panel-heading.active span{
+            transition: 0.3s;
+            transform: rotate(90deg);
+        }
+        .panel-content{
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tabs">
+        <ul class="tabs_list"></ul>
+        <div class="tab_content"></div>
+    </div>
+
+    <div class="accordion">
+        <!-- <div class="panel">
+            <div class="panel-heading"></div>
+            <div class="panel-content"></div>
+        </div> -->
+
+    </div>
+
+    <script src="jquery.js"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>
